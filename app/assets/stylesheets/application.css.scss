@@ -16,37 +16,53 @@
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
-h1, h2, h3{
-  font-family: 'Arimo', sans-serif;
-}
 
-.navbar, .home-callout{
-background: #7b4397; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #7b4397 , #dc2430); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
 
-.navbar-default .navbar-brand{
-  color:white;
+// Typography Styles
+h1, h2, h3 {
+  font-family: 'Raleway', sans-serif;
 }
-
-.navbar-default .navbar-nav > li > a {
-  color: white;
+// Background Gradient
+.navbar, .home-callout {
+  /* Gradient provided by @_ighosh at uiGradients.com */
+  background: #7b4397; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #7b4397 , #dc2430); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-.navbar-default .navbar-brand:hover {
-  color: white;
-  opacity: 0.75;
-}
-.navbar-default .navbar-nav > li > a:hover {
-  color: white;
-  opacity: 0.75;
-}
-
+// Nav Styles
 .navbar {
   border: none;
 }
 
+.navbar-brand {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  &:hover {
+    color: white;
+    opacity: 0.75;
+  }
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+.navbar-default .navbar-toggle {
+  border: 2px solid white;
+  &:hover, &:focus {
+    background-color: #00c6ff;
+  }
+}
+
+// Home Page Styles
 .home-callout {
   color: white;
   margin-top: -20px;
